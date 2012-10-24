@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% block titulo %} Recetas registradas {% endblock %}
+
+{% block style_css %}
+	img{width: 100px;}
+{% endblock %}
+
+{% block encabezado %}
+	<span class="encabezado">Proyectos Registrados</span>
+{% endblock %}
+{% block submenu%}
+	<span class="sep_v">/<span>
+	<a href="/new">Agregar un Proyecto</a>
+{% endblock%}
+{% block contenido %}
+	<ul>
+	{% for dato in proyectos %}
+		<li>
+			<a href="#">
+				<img src="http://culturacion.com/wp-content/uploads/2010/11/python.png">
+				{{dato.nombre}}
+			</a>
+		</li>
+	{% empty %}
+			<li><p>No hay proyectos para Mostrar</p></li>
+	{% endfor %}
+	</ul>
+{% endblock %}

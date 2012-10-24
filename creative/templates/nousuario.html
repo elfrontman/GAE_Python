@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block titulo %}Usuario desactivado{% endblock %}
+{% block encabezado%}
+	<h1>Error de acceso</h1>
+{% endblock %}
+{% block contenido %}
+	<p>El usuario y la contraseña no coinciden o no existen.</p>
+	<a href='{{ users.create_login_url}}'>Ingresar</a>
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE hmlt>
+<html lang='es'>
+	<head>
+		<meta charset='utf-8'>
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/base.css">
+		<title>Proyecto de Python y Django - {% block titulo %}{% endblock %}</title>
+	</head>
+	<body>
+		<header>
+			<h1>Bienvenidos :)</h1>
+			<nav>
+				<ul id="menu">
+					<li><a href="/">Inicio</a></li>
+					<li><a href="/proyectos">Proyectos</a></li>
+					<li><a href="/contacto">Contactenos</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section>
+			<div id="wrapper">
+				<div id="contenedor">
+					<nav id="submenu">
+						{% block encabezado %}{% endblock %}
+						{% block submenu %}{% endblock %}
+					</nav>
+					<hr>
+					<div id="content" class="contenido">
+						{% block contenido %}{% endblock %}
+					</div>
+					<hr>
+				</div>
+			</div>			
+		</section>
+		<footer>
+			<p>Desarrollado por @Novic09 &copy; 2012</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,8 @@
+<h2>Lista de Imagenes</h2>
+{% for image in images %}
+	<a href="{{image.dropBoxPhoto.url}}">
+		<img src="{{image.dropBoxPhoto.src}}" width="300">
+	</a> 
+	{% empty %}
+	<p>No hay Imagenes para mostrar</p>
+{% endfor %}
